@@ -13,15 +13,15 @@ export class CreateUserDto {
 
   @IsString()
   @IsOptional()
-  bio: string
+  bio?: string
 
   @IsString()
   @IsOptional()
-  profileImage: string
+  profileImage?: string
 
   @IsString()
   @IsOptional()
-  google_id: string
+  google_id?: string
 }
 
 export class UpdateUserDto extends PartialType(CreateUserDto) {}

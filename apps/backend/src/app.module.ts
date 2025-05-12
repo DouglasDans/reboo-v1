@@ -22,6 +22,7 @@ import { AuthUseCaseModule } from './use-cases/auth'
 import { APP_GUARD } from '@nestjs/core'
 import { AuthGuard } from './use-cases/auth/auth.guard'
 import { BookCollectionUseCaseModule } from './use-cases/book-collection'
+import { UserDemoUseCaseModule } from './use-cases/user-demo/user-demo.use-case.module'
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { BookCollectionUseCaseModule } from './use-cases/book-collection'
     PublisherUseCaseModule,
     ReadingSessionUseCaseModule,
     UserUseCaseModule,
+    UserDemoUseCaseModule,
   ],
   controllers: [
     AppController,
