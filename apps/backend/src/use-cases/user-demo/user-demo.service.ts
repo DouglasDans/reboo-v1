@@ -7,16 +7,17 @@ export class UserDemoService {
   constructor(private userService: UserService) {}
 
   async createUser() {
+    const password = Math.random().toString(36).substring(2, 12)
     const user = await this.userService.createUser({
       name: user_json.name,
       email:
         user_json.email +
-        Math.random().toString(36).substring(3, 6) +
+        Math.random().toString(36).substring(3, 14) +
         '@test.com',
-      password: Math.random().toString(36).substring(2, 12),
+      password: password,
     })
 
-    user.password = Math.random().toString(36).substring(2, 12)
+    user.password = password
     return user
   }
 }
