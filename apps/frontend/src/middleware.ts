@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
 
 const isPublicRoute = (pathname: string) => {
-  return pathname === "/"
+  return pathname === "/" || pathname === "/demo"
 }
 
 export async function middleware(request: NextRequest) {

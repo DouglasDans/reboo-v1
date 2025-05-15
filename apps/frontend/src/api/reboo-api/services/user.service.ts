@@ -17,6 +17,10 @@ export async function loginUser(
   })
 }
 
+export async function createDemoUser(): Promise<User> {
+  return await api.post("user/demo")
+}
+
 export async function createUser(data: {
   name: string
   email: string
