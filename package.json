@@ -32,5 +32,8 @@
     "url": "https://github.com/DouglasDans/reboo-book-tracker/issues"
   },
   "homepage": "https://rebootrack.me",
-  "packageManager": "yarn@4.5.2"
+  "packageManager": "yarn@4.5.2",
+  "dependencies": {
+    "next": "^14.2.35"
+  }
 }
