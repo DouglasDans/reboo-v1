@@ -11,9 +11,10 @@ COPY ./apps/backend/package.json ./
 
 # Instale as dependências
 RUN corepack enable && corepack prepare yarn@4.5.2 --activate
-RUN yarn install --production
+RUN yarn install
 
 # Copie o restante dos arquivos da aplicação
 COPY ./apps/backend .
 
 RUN yarn prisma generate
+RUN yarn build
