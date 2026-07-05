@@ -1,5 +1,5 @@
 
-FROM node:lts-alpine
+FROM node:22-bullseye-slim
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
